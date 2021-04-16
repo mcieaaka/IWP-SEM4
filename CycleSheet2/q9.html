@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start" onclick="Start()">Start</button>
+    <div id="quiz" style="display:none">
+        <div>
+            <p id="ques"></p>
+            <input type="radio" id="op1" name="q">
+            <input type="radio" id="op2" name="q">
+            <input type="radio" id="op3" name="q">
+            <input type="radio" id="op4" name="q">
+        </div>
+        <button onclick = "next()" >Next</button>
+    </div>
+<script>
+        const ques =[
+            {
+                Q:"Capital of India?",
+                op1:"Delhi",
+                op2:"Kolkata",
+                op3:"Mumbai",
+                op4:"Chennai",
+                ca:"Delhi"
+            },
+            {
+                Q:"Capital of Russia?",
+                op1:"Kiev",
+                op2:"Minsk",
+                op3:"Moscow",
+                op4:"Rostov",
+                ca:"Moscow"
+            },
+            {
+                Q:"Capital of USA?",
+                op1:"New York",
+                op2:"Dallas",
+                op3:"Florida",
+                op4:"Washington D.C.",
+                ca:"Washington D.C."
+            },
+            {
+                Q:"Capital of Israel?",
+                op1:"Prague",
+                op2:"Jerusalem",
+                op3:"Telaviv",
+                op4:"Gaza",
+                ca:"Jerusalem"
+            },
+            {
+                Q:"Capital of England?",
+                op1:"Wales",
+                op2:"Cambridge",
+                op3:"London",
+                op4:"Windsor",
+                ca:"London"
+            }
+        ];
+
+        function Start(){
+            document.getElementById("start").style.display="none";
+            document.getElementById("quiz").style.display="block";
+            document.getElementById("ques").innerHTML=ques[0].Q;
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body{
+    font-family: Verdana;
+    margin: 0;
+    padding: 0;
+    font-size: 14pt;
+}
+.top{
+    padding-top: 15px;
+    padding-left: 30% ;
+    padding-bottom: 5px;
+    background-image: url(background.jfif);
+    background-size: cover;
+}
+.top-box{
+    width: 600px;
+}
+.top-box>h1{
+    max-width: fit-content;
+    border: 5px solid orange;
+    background-color: yellow;
+}
+.box{
+    padding: 1em;
+    margin-top:1em;
+    margin-right: 1em;
+    width: 250px;
+    float: right;
+    border: 5px solid red;
+}
+.box>p{
+    font-size: 9pt;
+}
+.bottom{
+    padding-left: 30%;
+    width: 650px;
+}
+.bottom>img{
+    margin-right: 1em;
+}

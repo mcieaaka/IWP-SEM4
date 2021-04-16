@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+    <link rel="stylesheet" href="q8.css">
+</head>
+<body>
+    <div class="top">
+        <h1 style="text-align: center;">
+            Hi There, My name is Harshit Srivastava
+        </h1>
+    </div>
+    <div class="bottom">
+        <div class="nav">
+            <h2>Navigate</h2>
+            <ul>
+                <li><a href="https://www.pexels.com/search/landscape/">Item 1</a></li>
+                <li><a href="https://www.pexels.com/search/landscape/">Item 2</a></li>
+                <li><a href="https://www.pexels.com/search/landscape/">Item 3</a></li>
+                <li><a href="https://www.pexels.com/search/landscape/">Item 4</a></li>
+                <li><a href="https://www.pexels.com/search/landscape/">Item 5</a></li>
+            </ul>
+        </div>
+        <div class="data">
+            <h2>Content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos perferendis, repellat fugiat, officia ea minus, est possimus et eligendi eaque unde beatae repellendus. Architecto enim dolore delectus officiis inventore beatae.
+            Dicta quo impedit ipsum iste expedita dolore, necessitatibus fuga, iusto voluptates nam ad, cupiditate dolor soluta repellendus rem nihil! Blanditiis facilis doloremque temporibus eveniet modi nulla expedita aliquid nesciunt magni?
+            Possimus, ullam sunt molestias omnis voluptatum ut fugiat corporis<a href="https://www.pexels.com/search/landscape/">Link</a> repudiandae sint provident unde dicta quibusdam voluptatibus aliquam cumque libero modi, expedita autem vitae voluptas? Accusamus hic accusantium pariatur totam molestiae.
+            Debitis praesentium facilis deleniti sapiente fuga quia labore ipsum incidunt similique deserunt, et cum a iure qui optio asperiores! Facere excepturi voluptate quasi deleniti quo autem impedit velit culpa qui.
+            Reprehenderit illo maiores ab adipisci cumque perferendis sint soluta inventore deserunt vitae. Itaque ad eveniet est explicabo nobis perferendis fuga ipsum minima amet vero reprehenderit iure nam, qui omnis tempora!</p>
+            <a href="https://www.pexels.com/search/landscape/">Item 5</a>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe a accusamus repudiandae aspernatur dolorem voluptatibus sed nemo accusantium excepturi temporibus eos, pariatur autem tenetur ea ipsa consequatur. Neque, nihil nostrum!
+                Earum doloremque tempora reiciendis excepturi sed reprehenderit, harum aliquam facilis iusto similique nisi quasi est at magnam ipsam optio error illo fugiat laborum vel cupiditate? Similique architecto repellat perferendis veritatis.
+                Error accusantium vel alias quas, consequuntur voluptates iste eveniet sapiente delectus nostrum optio debitis fugit totam blanditiis minus nemo sequi quo atque voluptas nam quod. Minima quisquam doloremque ab sit.
+                Sit voluptatum error quis. Quis, earum culpa ipsum, saepe itaque fugiat error et tempore ullam quia est fugit mollitia. Culpa voluptatum reprehenderit omnis. Earum ab quasi necessitatibus aliquid voluptatum laborum.
+                Reiciendis, maiores, aliquam error accusamus aspernatur saepe labore eligendi, veniam culpa soluta odio! Doloremque rerum quidem odio iste ab temporibus fugit consequuntur quae, sint animi porro repudiandae numquam nisi tempore.
+            </p>
+        </div>
+    </div>
+    <div id="vid">
+        <video width="500px" height="500px" controls>
+            <source src="./2021-02-26 17-19-06.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <div id="canim">
+        <img src="wp2077495.jpg" id="night" alt="night" width="500px">
+        <p>Canvas to fill:</p>
+        <canvas id="myCanvas" width="500" height="400"style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+        <p><button onclick="myCanvas()">Try it</button></p>
+    </div>
+    <script>
+    function myCanvas() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      var img = document.getElementById("night");
+      ctx.drawImage(img,-50,-50);
+    }
+    </script>
+</body>
+</html>

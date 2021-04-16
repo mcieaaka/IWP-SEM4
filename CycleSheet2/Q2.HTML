@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const count = (arr)=>{
+            return arr.map((element)=>{
+                return (element>13&&element<29)? 1:0;
+            }).
+            reduce((a,b)=>{
+                return a+b;
+            },0);
+        }
+        document.write(count([1,14,16,32,21]));
+    </script>
+</body>
+</html>

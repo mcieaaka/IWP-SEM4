@@ -1,0 +1,26 @@
+body{
+    color: azure;
+    background-color: black;
+    text-align: center;
+    padding: 10px 80px;
+    margin:0px 20px;
+    border: cyan 5px double;
+}
+h1{
+    color: yellow;
+    font-family: cursive;
+}
+address{
+    color: violet;
+}
+a{
+    color: crimson;
+}
+dl{
+    font-family: Arial;
+}
+#neighbour{
+    margin: 0px 20px;
+    background-color: darkgreen;
+    color: darkorange;
+}

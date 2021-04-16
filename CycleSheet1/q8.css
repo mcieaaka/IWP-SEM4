@@ -1,0 +1,28 @@
+.top{
+    padding: 20px 2px;
+    background-image: url("https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+}
+.bottom{
+    display: flex;
+    margin: 2% 2%;
+}
+.nav{
+    background-color: lightyellow;
+    padding: 5px 80px;
+}
+.data{
+    padding: 10px;
+}
+a:hover{
+    background-color: green;
+    text-decoration-color: azure;
+}
+#vid{
+    display: block;
+    margin-right:auto ;
+    margin-left: auto;
+}
+#canim{
+    display: flex;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Notice Below no.s for http request</p>
+    <p id="d"></p>
+    <script>
+        var i = 0;
+        var z= setInterval(function(){
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "D:/sem4/IWP/LABIWP/class1/f.html", true);
+            xhttp.send();
+            document.getElementById("d").innerHTML=i
+            i++;
+        },5000)
+
+    </script>
+</body>
+</html>

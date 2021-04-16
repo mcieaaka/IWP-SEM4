@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #word{
+            font-size:2em;
+            color: Red;
+        }
+        #hint{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="word"></div>
+    <div id="hint"></div>
+    <input type="text" name="checkword" id="cw">
+    <button onclick="Check()">Check</button>
+    <button onclick="change()">Change</button>
+    <script>
+        const words = [
+            {
+                word:"script",
+                scrld:"cprsit",
+                hint:"programming"
+            },
+            {
+                word:"dog",
+                scrld:"ogd",
+                hint:"Animal"
+            },
+            {
+                word:"tales",
+                scrld:"stlae",
+                hint:"Read at Night"
+            }
+        ];
+        var k = Math.floor(Math.random()*3);
+        document.getElementById("word").innerText = words[k].scrld;
+        document.getElementById("hint").innerText = words[k].hint;
+
+        function change(){
+            k = Math.floor(Math.random()*3);
+            document.getElementById("word").innerText = words[k].scrld;
+            document.getElementById("hint").innerText = words[k].hint;
+        }
+        function Check(){
+            var cw= document.getElementById("cw").value;
+            var w = words[k].word;
+            if (cw===w){
+                alert("Successful");
+            }
+            else{
+                alert("failure");
+            }
+        }
+    </script>
+</body> 
+</html>
