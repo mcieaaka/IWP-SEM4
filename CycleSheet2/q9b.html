@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="qbox">
+        <h3 id="timer"></h3>
+        <h3 id="qq"></h3>
+        <select id="ans">
+            <option value="op1" id="op1"></option>
+            <option value="op2" id="op2"></option>
+            <option value="op3" id="op3"></option>
+            <option value="op4" id="op4"></option>
+        </select>
+    </div>
+    <script>
+        const ques =[
+            {
+                Q:"Capital of India?",
+                op1:"Delhi",
+                op2:"Kolkata",
+                op3:"Mumbai",
+                op4:"Chennai",
+                ca:"Delhi"
+            },
+            {
+                Q:"Capital of Russia?",
+                op1:"Kiev",
+                op2:"Minsk",
+                op3:"Moscow",
+                op4:"Rostov",
+                ca:"Moscow"
+            },
+            {
+                Q:"Capital of USA?",
+                op1:"New York",
+                op2:"Dallas",
+                op3:"Florida",
+                op4:"Washington D.C.",
+                ca:"Washington D.C."
+            },
+            {
+                Q:"Capital of Israel?",
+                op1:"Prague",
+                op2:"Jerusalem",
+                op3:"Telaviv",
+                op4:"Gaza",
+                ca:"Jerusalem"
+            },
+            {
+                Q:"Capital of England?",
+                op1:"Wales",
+                op2:"Cambridge",
+                op3:"London",
+                op4:"Windsor",
+                ca:"London"
+            }
+        ];
+        var curr = 0;
+        function countdown(sec,ele,curr){
+            var element = document.getElementById(ele);
+            element.innerText = sec;
+            if (sec<0){
+                clearTimeout(ct);
+                next(curr);
+            }
+            sec--;
+            var ct = setTimeout('countdown('+sec+',"'+ele+'")', 1000)
+        }
+        function quesd(curr){
+            var qq = document.getElementById("qq");
+            qq.innerHTML=ques[curr].Q;
+            document.getElementById("op1").innerText=ques[curr].op1;
+            document.getElementById("op2").innerText=ques[curr].op2;
+            document.getElementById("op3").innerText=ques[curr].op3;
+            document.getElementById("op4").innerText=ques[curr].op4;
+            countdown(10,"timer",curr);
+        }
+        quesd(curr);
+    </script>
+</body>
+</html>
