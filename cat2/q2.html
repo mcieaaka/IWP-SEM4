@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat2Question2</title>
+</head>
+<body>
+    <h3>Event Registration fORM</h3>
+    <form id="event" >
+        <table >
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="firstname" id="fn" pattern="[a-zA-Z]"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lastname" id="ln" pattern="[a-zA-Z]"></td>
+            </tr><tr>
+                <td>Mailing Address:</td>
+                <td><input type="email" name="email" id="em" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></td>
+            </tr><tr>
+                <td>City:</td>
+                <td><input type="text" name="city" id="city" pattern="[a-zA-Z]"></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <select name="state" id="state">
+                        <option value="UP">UP</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Karnataka">Karnataka</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Zip code</td>
+                <td><input type="text" name="zip" id="zip" maxlength="6" pattern="[0-9]"></td>
+            </tr>
+            <tr>
+                <td>Are you speaking at Conference?</td>
+                <td>
+                    <input type="checkbox" name="conf" id="con1" value="yes">YES <input type="checkbox" name="conf" id="con2" value="no">NO
+                </td>
+            </tr>
+            <tr>
+                <td>Conference Pass</td>
+                <td colspan=4>
+                    <input type="radio" value="1stpass" id="1stpass" name="pass">1st Pass<br>
+                    <input type="radio" value="2ndpass" id="2ndpass" name="pass">2nd Pass<br>
+                    <input type="radio" value="3rdpass" id="3rdpass" name="pass">3rd Pass<br>
+                    <input type="radio" value="4thpass" id="4thpass" name="pass">4th Pass<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Meal Preference</td>
+                <td>
+                    <select name="meal" id="meal">
+                        <option value="Vegitarean">Vegitarean</option>
+                        <option value="Non-Vegitarean">Non-Vegitarean</option>
+                        <option value="No-Preference">No-Preference</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button onclick="validate()">Submit</button>
+    </form>
+    <div id="display"></div>
+    <script>
+        
+        function validate() {
+            var res = document.getElementById("display");
+            var f= alert(document.getElementById("fn").value);
+            var l= alert(document.getElementById("ln").value);
+            var e= alert(document.getElementById("em").value);
+            var c= alert(document.getElementById("city").value);
+            var s =alert(document.getElementById("state").value);
+            var z= alert(document.getElementById("zip").value);
+            var test1 = document.getElementById("con1").checked;
+            var test2 = document.getElementById("con2").checked;
+            if ((test1==false)&&(test2==false)) 
+            {
+                alert("please select a value");
+                return false;
+            }
+            else
+            {
+            alert("thanks for your selection");
+            return true;
+            } 
+            for(i=0;i<document.event.pass.length;i++)
+            {
+                if(document.event.pass[i].checked)
+                {
+                alert(document.event.pass[i].value);
+                }
+            }
+            var m =alert(document.getElementById("meal").value);
+
+        }
+    </script>
+</body>
+</html>

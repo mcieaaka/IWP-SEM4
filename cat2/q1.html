@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat2Question1</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        var el = document.getElementById("result");
+        var n= parseInt(prompt("enter value of n"));
+        var arr= prompt("enter no.s positive integers seperated by comma").split(",").map((a)=>{return parseInt(a);});
+        var s=0,c=0;
+        for(i=0;i<n;i++){
+            if(arr[i]<0){
+                el.innerHTML="EXCEPTION: FOUND A NEGATIVE NO.";
+            }
+            else if(arr[i]%2==0){
+                s=s+arr[i];
+            }
+            else if(arr[i]%2!=0){
+                s=s+arr[i];
+                c++;
+            }
+        }
+        var avg = s/n;
+        el.innerHTML+="<p>Average= "+avg+"</p>";
+        el.innerHTML+="<p>No. of Odd entries= "+c+"</p>";
+    </script>
+</body>
+</html>
