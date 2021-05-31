@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="ques2.php" method="POST">
+        <p>NAME: <input type="text" name="name"></p>
+        <p>PASSWORD: <input type="password" name="password"></p>
+        <p>GENDER: <input type="radio" name="gender" id="male" value="male">MALE <input type="radio" name="gender" id="female" value="female">FEMALE</p> 
+        <p>Date of Birth: <input type="date" name="dob"></p>
+        <p>
+            EDUCATION: <input type="checkbox" name="edu[]" value="UG" id="ug">UG
+            <input type="checkbox" name="edu[]" value="PG" id="pg">PG
+            <input type="checkbox" name="edu[]" value="Professional" id="prof">Professional
+        </p>
+        <p>EMAIL: <input type="email" name="email"></p>
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>

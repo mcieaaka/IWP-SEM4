@@ -1,0 +1,4 @@
+<?php
+    $handle = opendir("./DATA");
+    
+?>
