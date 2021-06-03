@@ -18,6 +18,7 @@
                 <option value="green">green</option>
                 <option value="red">red</option>
                 <option value="yellow">yellow</option>
+                <option value="orange">orange</option>
             </select>
         </p>
         <p>Palindrome Check:<input type="text" name="pal"></p>
@@ -27,6 +28,26 @@
     error_reporting(0);
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $c = $_POST['col'];
+        switch($c){
+            case "white":
+                echo "<style>body{background-color:white}</style>";
+                break;
+            case "blue":
+                echo "<style>body{background-color:blue}</style>";
+                break;
+            case "green":
+                echo "<style>body{background-color:green}</style>";
+                break;
+            case "red":
+                echo "<style>body{background-color:red}</style>";
+                break;
+            case "yellow":
+                echo "<style>body{background-color:yellow}</style>";
+                break;
+            case "orange":
+                echo "<style>body{background-color:orange}</style>";
+                break;
+        }
         echo "<style>body{background-color:$c}</style>";
     }
     if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -46,8 +67,17 @@
     }
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $n = $_POST['pal'];
-        $r = strrev($n);
-        if(!strcmp($r,$n)){
+        function Reverse($str){
+            for($i=strlen($str)-1, $j=0; $j<$i; $i--, $j++) 
+            {
+                $temp = $str[$i];
+                $str[$i] = $str[$j];
+                $str[$j] = $temp;
+            }
+            return $str;
+        }
+        $r = Reverse($n);
+        if($r===$n){
             echo $n." is Palindrome";
         }else{
             echo $n." is not Palindrome";
