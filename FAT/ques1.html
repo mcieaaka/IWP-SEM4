@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            color:aqua;
+            width:max-content;
+            padding:20px;
+            border-radius:24px;
+        }
+        button{
+            background-color:black;
+            color: aqua;
+            border: 2px solid aqua;
+        }
+        button:hover{
+            background-color:aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Passenger</h1>
+    <form action="passenger.php" method="post">
+        <table>
+            <tr>
+                <td>Pid</td>
+                <td><input type="text" name="pid" id="pid"></td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="fn" id="fn"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="ln" id="ln"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="add" id="add"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="gender" id="male" value="male">Male <input type="radio" name="gender" id="female" value="female">Female</td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="text" name="phn" id="phn"></td>
+            </tr>
+        </table>
+        <button onclick="validate()">Submit</button>
+    </form>
+    </div>
+    <script>
+        var pid = document.getElementById("pid");
+        var fn = document.getElementById("fn");
+        var ln = document.getElementById("ln");
+        var add = document.getElementById("add");
+        var phn = document.getElementById("phn");
+        function validate(){
+            if(pid.value.length==0){
+                alert("Please Enter Pid");
+            }
+            if(fn.value.length==0){
+                alert("Please Enter First Name");
+            }
+            if(ln.value.length==0){
+                alert("Please Enter Last Name");
+            }
+            if(add.value.length==0){
+                alert("Please Enter Address");
+            }
+            if(phn.value.length!=0){
+                alert("Please Enter Phone of length 10");
+            }
+            alert("validated");
+        }
+    </script>
+</body>
+</html>
